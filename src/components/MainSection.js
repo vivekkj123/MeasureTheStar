@@ -8,6 +8,7 @@ const octokit = new Octokit({ auth: process.env.AUTH_API});
 
 function MainSection() {
     const [StarCount, setStarCount] = useState(0);
+    const [RenderStar, setRenderStar] = useState(false)
     const [Text, setText] = useState("");
     let getStarcount = async(Text) => {
         let spilitArr = Text.split('/')
@@ -21,6 +22,8 @@ function MainSection() {
               console.log(err)
               console.error(err.message)
           })	
+          setRenderStar(true)
+
     };
     return (<div className="mainSection">
     <div className="Input">
@@ -37,7 +40,7 @@ function MainSection() {
     </div>
     <div>
       
-      {StarCount?<Star size={StarCount}/>:null}
+      {RenderStar?<Star size={StarCount}/>:null}
     </div>
     </div>
     
