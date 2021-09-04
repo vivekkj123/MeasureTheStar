@@ -30,8 +30,8 @@ function Input() {
         value={Text}
         onChange={(e)=> setText(e.target.value)}
       />
-      <button onClick={()=>{getStarcount(Text)}}>
-        <FontAwesomeIcon icon={faArrowAltCircleRight} />
+      <button class='input__btn' onClick={()=>{getStarcount(Text)}}>
+        <FontAwesomeIcon icon={faArrowAltCircleRight} size={100}/>
       </button>
     </div>
   );

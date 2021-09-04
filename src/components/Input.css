@@ -10,3 +10,10 @@
 .Input__box:focus{
     outline: none;
 }
+.input__btn{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 50px;
+}
