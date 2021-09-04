@@ -14,6 +14,7 @@ function MainSection() {
         let spilitArr = Text.split('/')
         let username = spilitArr[0]
         let repo_name = spilitArr[1]
+        // eslint-disable-next-line
         const response = await octokit.request(`GET /repos/${username}/${repo_name}`, {
           }).then((response)=>{
               console.log(response.data.stargazers_count)
