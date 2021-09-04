@@ -1,8 +1,10 @@
 import React from 'react'
 import './Star.css'
-function Star() {
+function Star(props) {
     return (
-        <div className="Star">
+        <div className="Star" style={{
+            fontSize: props.size
+        }}>
             ⭐
         </div>
     )

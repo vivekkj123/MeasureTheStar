@@ -1,3 +1,18 @@
-.header__text{
-    text-align: center;
+
+.header{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    border-radius: 35px;
+    padding: 10px;
+    justify-content: space-around;
+}
+.gh__logo{
+    margin: 10px;
+    width: auto;
+    height: 68px;
+    cursor: pointer;
 }

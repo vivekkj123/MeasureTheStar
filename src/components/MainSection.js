@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import "./Input.css";
+import "./MainSection.css";
 import { Octokit } from "@octokit/core";
 import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
+import Star from './Star'
 const octokit = new Octokit({ auth: process.env.AUTH_API});
 
-function Input() {
+function MainSection() {
     const [StarCount, setStarCount] = useState(0);
     const [Text, setText] = useState("");
     let getStarcount = async(Text) => {
@@ -21,7 +22,7 @@ function Input() {
               console.error(err.message)
           })	
     };
-    return (
+    return (<div className="mainSection">
     <div className="Input">
       <input
         placeholder="username/repo"
@@ -30,11 +31,17 @@ function Input() {
         value={Text}
         onChange={(e)=> setText(e.target.value)}
       />
-      <button class='input__btn' onClick={()=>{getStarcount(Text)}}>
-        <FontAwesomeIcon icon={faArrowAltCircleRight} size={100}/>
+      <button className='input__btn' onClick={()=>{getStarcount(Text)}}>
+        <FontAwesomeIcon icon={faArrowAltCircleRight}/>
       </button>
     </div>
+    <div>
+      
+      {StarCount?<Star size={StarCount}/>:null}
+    </div>
+    </div>
+    
   );
 }
 
-export default Input;
+export default MainSection;

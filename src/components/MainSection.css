@@ -3,9 +3,12 @@
     justify-content: center;
 }
 .Input__box{
-    height: 10vh;
-    width: 50vh;
-    border-radius: 30px;
+    height: 75px;
+    width: 890px;
+    border-radius: 18px;
+    margin: 20px;
+    font-size: 20px;
+    border: none;
 }
 .Input__box:focus{
     outline: none;
@@ -16,4 +19,8 @@
     border: none;
     outline: none;
     font-size: 50px;
+    color: #4ECB71;
+}
+.mainSection{
+    margin-top: 50px;
 }
