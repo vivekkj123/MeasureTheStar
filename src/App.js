@@ -1,4 +1,5 @@
 import React from 'react'
+import { Router } from 'react-router'
 import './App.css'
 import Footer from './components/Footer'
 import Header from './components/Header'
@@ -9,6 +10,7 @@ function App() {
       <Header/>
       <MainSection/>
       <Footer/>
+     
     </div>
   )
 }

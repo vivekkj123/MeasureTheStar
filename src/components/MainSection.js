@@ -20,7 +20,7 @@ function MainSection() {
     const response = await octokit
       .request(`GET /repos/${username}/${repo_name}`, {})
       .then((response) => {
-        console.log(response.data.stargazers_count);
+        console.log(response);
         setStarCount(response.data.stargazers_count);
       })
       .catch((err) => {
