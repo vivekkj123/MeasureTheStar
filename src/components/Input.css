@@ -7,3 +7,6 @@
     width: 50vh;
     border-radius: 30px;
 }
+.Input__box:focus{
+    outline: none;
+}
