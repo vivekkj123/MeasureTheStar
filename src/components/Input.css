@@ -1,0 +1,9 @@
+.Input{
+    display: flex;
+    justify-content: center;
+}
+.Input__box{
+    height: 10vh;
+    width: 50vh;
+    border-radius: 30px;
+}
